@@ -1,3 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
 
+namespace Perimeters
+{
+    class Program
+    {
+        static void squareArea(int a)
+        {
+            Console.WriteLine(a * a);
+        }
+
+        static void rectangleArea(int b, int c)
+        {
+            Console.WriteLine(b * c);
+        }
+
+        static void Main(string[] args)
+        {
+            squareArea(4);
+            rectangleArea(2, 4);
+        }
+    }
+}
