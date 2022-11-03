@@ -4,44 +4,122 @@ namespace Perimeters
 {
     class FiguresPerimeters
     {
-        static void squarePerimeter(int a)
+        static void squarePerimeter()
         {
-            Console.WriteLine(a * 4);
+            int a;
+            int pole;
+            Console.WriteLine("Wprowadź długość boku ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Obwód tego kwadratu to : ");
+            pole = (a * 4);
+            Console.WriteLine(pole);
         }
 
-        static void rectanglePerimeter(int b, int c)
+        static void rectanglePerimeter()
         {
-            Console.WriteLine(b * 2 + c * 2);
+            int b;
+            int a;
+            int obwod;
+            Console.WriteLine("Wprowadź długość boku a: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Wprowadź długość boku b: ");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("obwód tego prostokątu to: ");
+            obwod = ((a * 2) + (b * 2));
+            Console.WriteLine(obwod);
         }
 
-        static void trianglePerimeter(int cc, int mm, int yy)
+        static void trianglePerimeter()
         {
-            Console.WriteLine(cc + mm + yy);
+            int a;
+            int b;
+            int c;
+            int obwód;
+
+            Console.WriteLine("Wprowadź długość boku a ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Wprowadź długość boku b ");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Wprowadź długość boku c ");
+            c = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("obwód tego trójkąta to: ");
+            obwód = (a + b + c);
+            Console.WriteLine(obwód);
         }
 
-        static void trapezePerimeter(int q, int w, int e, int qq)
+        static void trapezePerimeter()
         {
-            Console.WriteLine(q + w + e + qq);
+            int a;
+            int b;
+            int c;
+            int d;
+            int obwód;
+
+            Console.WriteLine("Wprowadź długość boku a ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Wprowadź długość boku b ");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Wprowadź długość boku c ");
+            c = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Wprowadź długość boku d ");
+            d = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("obwód tego trapezu to: ");
+            obwód = (a + b + c + d);
+            Console.WriteLine(obwód);
         }
 
-        static void circlePerimeter(int r)
+        static void circlePerimeter()
         {
-            Console.WriteLine((Math.PI * r) * 2);
+            float r;
+            double obw;
+
+            Console.WriteLine("Wprowadź długość promienia r ");
+            r = float.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("obwód tego koła to: ");
+            obw = ((Math.PI * r) * 2);
+            Console.WriteLine(obw);
         }
 
-        static void rhombusPerimeter(int zz, int xx, int cc, int bb)
+        static void rhombusPerimeter()
         {
-            Console.WriteLine(zz + xx + cc + bb);
+            int a; 
+            int obw;
+
+            Console.WriteLine("Wprowadź długość odcinka a ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("obwód tego rombu to: ");
+            obw = (a * 4);
+            Console.WriteLine(obw);
         }
 
         static void Main(string[] args)
         {
-            squarePerimeter(4);
-            rectanglePerimeter(6, 2);
-            trianglePerimeter(2, 2, 2);
-            trapezePerimeter(6, 7, 2, 2);
-            circlePerimeter(5);
-            rhombusPerimeter(4, 4, 4, 4);  
+            squarePerimeter();
+            //rectanglePerimeter();
+            //trianglePerimeter();
+            //trapezePerimeter();
+            ///circlePerimeter();
+            //rhombusPerimeter();  
         }
     }
 }
