@@ -19,11 +19,17 @@ namespace Perimeters
             Console.WriteLine(z * h / 2);
         }
 
+        static void circleArea(int r)
+        {
+            Console.WriteLine(Math.Pow((Math.PI * r), 2));
+        }
+
         static void Main(string[] args)
         {
             squareArea(4);
             rectangleArea(2, 4);
             triangleArea(4, 6);
+            circleArea(2);
         }
     }
 }
