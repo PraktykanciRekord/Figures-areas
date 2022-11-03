@@ -4,44 +4,117 @@ namespace Perimeters
 {
     class Areas
     {
-        static void squareArea(int a)
+        static void squareArea()
         {
-            Console.WriteLine(a * a);
+            int a;
+            int pole;
+            Console.WriteLine("Wprowadź długość boku ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Pole tego kwadratu to: ");
+            pole = (a * 2);
+            Console.WriteLine(pole);
         }
 
-        static void rectangleArea(int b, int c)
+        static void rectangleArea()
         {
-            Console.WriteLine(b * c);
+            int b;
+            int a;
+            int pole;
+            Console.WriteLine("Wprowadź długość boku a: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Wprowadź długość boku b: ");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("pole tego prostokątu to: ");
+            pole = (a + b);
+            Console.WriteLine(pole);
         }
 
-        static void triangleArea(int z, int h)
+        static void triangleArea()
         {
-            Console.WriteLine(z * h / 2);
+            int a;
+            int h;
+            int pole;
+
+            Console.WriteLine("Wprowadź długość odcinka a ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Wprowadź długość wysokości h ");
+            h = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("pole tego trójkąta to: ");
+            pole = ((a * h) / 2);
+            Console.WriteLine(pole);
         }
 
-        static void circleArea(int r)
+        static void circleArea()
         {
-            Console.WriteLine(Math.Pow((Math.PI * r), 2));
+            float r;
+            double pole;
+
+            Console.WriteLine("Wprowadź długość promienia r ");
+            r = float.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("pole tego koła to: ");
+            pole = (Math.Pow((Math.PI * r), 2));
+            Console.WriteLine(pole);
         }
 
-        static void trapezeArea(int t, int i, int pp)
+        static void trapezeArea()
         {
-            Console.WriteLine((t + i) * pp / 2);
+            int a;
+            int b;
+            int h;
+            int pole;
+
+            Console.WriteLine("Wprowadź długość boku a ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Wprowadź długość boku b ");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Wprowadź długość wysokości h ");
+            h = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("pole tego trapecu to: ");
+            pole = ((a + b) * h / 2);
+            Console.WriteLine(pole);
         }
 
-        static void rhombusArea(int e, int f)
+        static void rhombusArea()
         {
-            Console.WriteLine(e * f / 2);
+            int e;
+            int f;
+            int pole;
+
+            Console.WriteLine("Wprowadź długość przeciwległej e ");
+            e = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Wprowadź długość przeciwległej f ");
+            f = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("pole tego rombu to: ");
+            pole = (e * f / 2);
+            Console.WriteLine(pole);
         }
 
         static void Main(string[] args)
         {
-            squareArea(4);
-            rectangleArea(2, 4);
-            triangleArea(4, 6);
-            circleArea(2);
-            trapezeArea(2, 2, 10);
-            rhombusArea(10, 5);
+            squareArea();
+            //rectangleArea();
+            //triangleArea();
+            //circleArea();
+            //trapezeArea();
+            //rhombusArea();
         }
     }
 }
