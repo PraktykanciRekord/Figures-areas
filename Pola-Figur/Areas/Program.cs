@@ -7,61 +7,61 @@ namespace Areas
         static void squareArea()
         {
             int a;
-            int pole;
-            Console.WriteLine("Wprowadź długość boku ");
+            int area;
+            Console.WriteLine("Enter the value of side a: ");
             a = int.Parse(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine("Pole tego kwadratu to: ");
-            pole = (a * a);
-            Console.WriteLine(pole);
+            Console.WriteLine("Area of this sqaure is: ");
+            area = (a * a);
+            Console.WriteLine(area);
         }
 
         static void rectangleArea()
         {
             int b;
             int a;
-            int pole;
-            Console.WriteLine("Wprowadź długość boku a: ");
+            int area;
+            Console.WriteLine("Enter the value of side a: ");
             a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Wprowadź długość boku b: ");
+            Console.WriteLine("Enter the value of side b: ");
             b = int.Parse(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine("pole tego prostokątu to: ");
-            pole = (a * b);
-            Console.WriteLine(pole);
+            Console.WriteLine("Area of this rectangle is: ");
+            area = (a * b);
+            Console.WriteLine(area);
         }
 
         static void triangleArea()
         {
             int a;
             int h;
-            int pole;
+            int area;
 
-            Console.WriteLine("Wprowadź długość odcinka a ");
+            Console.WriteLine("Enter the value of side a: ");
             a = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Wprowadź długość wysokości h ");
+            Console.WriteLine("Enter the value of height h: "); 
             h = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("pole tego trójkąta to: ");
-            pole = ((a * h) / 2);
-            Console.WriteLine(pole);
+            Console.WriteLine("Area of this triangle: ");
+            area = ((a * h) / 2);
+            Console.WriteLine(area);
         }
 
         static void circleArea()
         {
             float r;
-            double pole;
+            double area;
 
-            Console.WriteLine("Wprowadź długość promienia r ");
+            Console.WriteLine("Enter the value of radius r: ");
             r = float.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("pole tego koła to: ");
-            pole = (Math.Pow((Math.PI * r), 2));
-            Console.WriteLine(pole);
+            Console.WriteLine("Area of this circle is: ");
+            area = (Math.Pow((Math.PI * r), 2));
+            Console.WriteLine(area);
         }
 
         static void trapezeArea()
@@ -69,42 +69,42 @@ namespace Areas
             int a;
             int b;
             int h;
-            int pole;
+            int area;
 
-            Console.WriteLine("Wprowadź długość boku a ");
+            Console.WriteLine("Enter the value of side a: ");
             a = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Wprowadź długość boku b ");
+            Console.WriteLine("Enter the value of side b: ");
             b = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Wprowadź długość wysokości h ");
+            Console.WriteLine("Enter the value of height h: ");
             h = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("pole tego trapecu to: ");
-            pole = ((a + b) * h / 2);
-            Console.WriteLine(pole);
+            Console.WriteLine("Area of this trapeze is: ");
+            area = ((a + b) * h / 2);
+            Console.WriteLine(area);
         }
 
         static void rhombusArea()
         {
             int e;
             int f;
-            int pole;
+            int area;
 
-            Console.WriteLine("Wprowadź długość przeciwległej e ");
+            Console.WriteLine("Enter the value of side e: ");
             e = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Wprowadź długość przeciwległej f ");
+            Console.WriteLine("Enter the value of side f: ");
             f = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("pole tego rombu to: ");
-            pole = (e * f / 2);
-            Console.WriteLine(pole);
+            Console.WriteLine("Area of this rhombus is: ");
+            area = (e * f / 2);
+            Console.WriteLine(area);
         }
 
         static void Main(string[] args)

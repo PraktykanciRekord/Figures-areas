@@ -8,28 +8,28 @@ namespace Perimeters
         static void squarePerimeter()
         {
             int a;
-            int pole;
-            Console.WriteLine("Wprowadź długość boku ");
+            int perimeter;
+            Console.WriteLine("Enter value: ");
             a = int.Parse(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine("Obwód tego kwadratu to : ");
-            pole = (a * 4);
-            Console.WriteLine(pole);
+            Console.WriteLine("Perimeter of this square is: ");
+            perimeter = (a * 4);
+            Console.WriteLine(perimeter);
         }
 
         static void rectanglePerimeter()
         {
             int b;
             int a;
-            int obwod;
-            Console.WriteLine("Wprowadź długość boku a: ");
+            int perimeter;
+            Console.WriteLine("Enter the value of side a: ");
             a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Wprowadź długość boku b: ");
+            Console.WriteLine("Enter the value of side b: ");
             b = int.Parse(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine("obwód tego prostokątu to: ");
-            obwod = ((a * 2) + (b * 2));
-            Console.WriteLine(obwod);
+            Console.WriteLine("Perimeter of this rectangle is: ");
+            perimeter = ((a * 2) + (b * 2));
+            Console.WriteLine(perimeter);
         }
 
         static void trianglePerimeter()
@@ -37,23 +37,23 @@ namespace Perimeters
             int a;
             int b;
             int c;
-            int obwód;
+            int perimeter;
 
-            Console.WriteLine("Wprowadź długość boku a ");
+            Console.WriteLine("Enter the value of side a: ");
             a = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Wprowadź długość boku b ");
+            Console.WriteLine("Enter the value of side b: ");
             b = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Wprowadź długość boku c ");
+            Console.WriteLine("Enter the value of side c: ");
             c = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("obwód tego trójkąta to: ");
-            obwód = (a + b + c);
-            Console.WriteLine(obwód);
+            Console.WriteLine("Perimeter of this triangle is: ");
+            perimeter = (a + b + c);
+            Console.WriteLine(perimeter);
         }
 
         static void trapezePerimeter()
@@ -62,55 +62,55 @@ namespace Perimeters
             int b;
             int c;
             int d;
-            int obwód;
+            int perimeter;
 
-            Console.WriteLine("Wprowadź długość boku a ");
+            Console.WriteLine("Enter the value of side a: ");
             a = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Wprowadź długość boku b ");
+            Console.WriteLine("Enter the value of side b: ");
             b = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Wprowadź długość boku c ");
+            Console.WriteLine("Enter the value of side c: ");
             c = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Wprowadź długość boku d ");
+            Console.WriteLine("Enter the value of side d: ");
             d = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("obwód tego trapezu to: ");
-            obwód = (a + b + c + d);
-            Console.WriteLine(obwód);
+            Console.WriteLine("Perimeter of this trapeze is: ");
+            perimeter = (a + b + c + d);
+            Console.WriteLine(perimeter);
         }
 
         static void circlePerimeter()
         {
             float r;
-            double obw;
+            double pem;
 
-            Console.WriteLine("Wprowadź długość promienia r ");
+            Console.WriteLine("Enter value of radius r: ");
             r = float.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("obwód tego koła to: ");
-            obw = ((Math.PI * r) * 2);
-            Console.WriteLine(obw);
+            Console.WriteLine("Perimeter of this circle is: ");
+            pem = ((Math.PI * r) * 2);
+            Console.WriteLine(pem);
         }
 
         static void rhombusPerimeter()
         {
             int a;
-            int obw;
+            int pem;
 
-            Console.WriteLine("Wprowadź długość odcinka a ");
+            Console.WriteLine("Enter the value of side a: ");
             a = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("obwód tego rombu to: ");
-            obw = (a * 4);
-            Console.WriteLine(obw);
+            Console.WriteLine("Perimeter of this rhombus is: ");
+            pem = (a * 4);
+            Console.WriteLine(pem);
         }
 
         static void Main(string[] args)
