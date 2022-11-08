@@ -92,6 +92,33 @@ namespace MyApplication
                                 double a;
                                 double obw;
                                 bool succes = false;
+                                while (succes == false)
+                                {
+
+                                    Console.WriteLine("\ndługość boku a \n");
+                                    string t = Console.ReadLine();
+                                    if (t == "")
+                                    {
+                                        Console.WriteLine("Puste");
+                                        continue;
+                                    }
+                                    else
+                                    {
+
+                                        try
+                                        {
+                                            a = double.Parse(t);
+                                        }
+                                        catch (FormatException)
+                                        {
+                                            Console.WriteLine("Musi byc liczba");
+                                            continue;
+                                        }
+
+                                    }
+                                    succes = true;
+                                    break;
+                                }
                                 Console.WriteLine("\ndługość boku a: \n");
                                 a = double.Parse(Console.ReadLine());
                                 Console.WriteLine("\nobwód tego Figurau: \n");
