@@ -19,10 +19,10 @@ namespace MyApplication
 
         public void Choose()
         {
-            double figura;
-            double pole;
-            double obwod;
-            double Figura;
+            int figura;
+            int pole;
+            int obwod;
+            int Figura;
             Console.WriteLine("jaką figure chcesz obliczyć \n");
             Console.WriteLine("Kwadrat --- 1\n");
             Console.WriteLine("prostokąt - 2\n");
@@ -30,197 +30,170 @@ namespace MyApplication
             Console.WriteLine("trapez ---- 4\n");
             Console.WriteLine("trójkąt --- 5\n");
             Console.WriteLine("koło ------ 6\n");
-            figura = double.Parse(Console.ReadLine());
+            figura = int.Parse(Console.ReadLine());
             while (figura < 1 || figura > 6)
             {
                 Console.WriteLine("\nnie ma takiej liczby\n");
                 Console.WriteLine("\npowtórz\n");
-                figura = double.Parse(Console.ReadLine());
+                figura = int.Parse(Console.ReadLine());
             }
             switch (figura)
             {
                 case 1:
                     Console.WriteLine("\npole = 1\n");
                     Console.WriteLine("obwód = 2\n");
-                    Figura = double.Parse(Console.ReadLine());
+                    Figura = int.Parse(Console.ReadLine());
                     switch (Figura)
                     {
 
                         case 1:
                             {
-                                double a;
-                                double p;
-                                bool succes = false;
-                                
-                                
-                                    while (succes == false)
-                                    {
+                                Console.WriteLine("\nWprowadź długość boku \n");
+                                var szczur = Console.ReadLine();
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
 
-                                        Console.WriteLine("\ndługość boku a \n");
-                                        string t = Console.ReadLine();
-                                        if (t == "")
-                                        {
-                                            Console.WriteLine("Puste");
-                                            continue;
-                                        }
-                                        else
-                                        {
+                                while (isNumber == false)
+                                {
 
-                                            try
-                                            {
-                                                a = double.Parse(t);
-                                            }
-                                            catch (FormatException)
-                                            {
-                                                Console.WriteLine("Musi byc liczba");
-                                                continue;
-                                            }
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
 
-                                        }
-                                        succes = true;
-                                    break;
-                                    }
-                                   a = double.Parse(Console.ReadLine());
-                                   Console.WriteLine("\npole tego kwadratu:\n ");
-                                   p = (a * a);
-                                   Console.WriteLine(p);                              
+                                }
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("\nPole tego kwadratu to: \n");
+                                    double a = Convert.ToDouble(szczur);
+                                    double p;
+                                    p = a * 2;
+                                    Console.WriteLine(p);
+                                }
                             }
                             break;
                         case 2:
 
+
                             {
-                                double a;
-                                double obw;
-                                bool succes = false;
-                                while (succes == false)
+                                Console.WriteLine("\nWprowadź długość boku a\n");
+                                var szczur = Console.ReadLine();
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
+
+                                while (isNumber == false)
                                 {
 
-                                    Console.WriteLine("\ndługość boku a \n");
-                                    string t = Console.ReadLine();
-                                    if (t == "")
-                                    {
-                                        Console.WriteLine("Puste");
-                                        continue;
-                                    }
-                                    else
-                                    {
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
 
-                                        try
-                                        {
-                                            a = double.Parse(t);
-                                        }
-                                        catch (FormatException)
-                                        {
-                                            Console.WriteLine("Musi byc liczba");
-                                            continue;
-                                        }
-
-                                    }
-                                    succes = true;
-                                    break;
                                 }
-                                Console.WriteLine("\ndługość boku a: \n");
-                                a = double.Parse(Console.ReadLine());
-                                Console.WriteLine("\nobwód tego Figurau: \n");
-                                obw = (a * 4);
-                                Console.WriteLine(obw);
-                            }                   
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("\nObwód tego kwadratu to: \n");
+                                    double a = Convert.ToDouble(szczur);
+                                    double p;
+                                    p = a * 4;
+                                    Console.WriteLine(p);
+                                }
+                            }
                             break;
-                            
+
                     }
                     break;
                 case 2:
                     Console.WriteLine("\npole = 1\n");
                     Console.WriteLine("obwód = 2\n");
-                    Figura = double.Parse(Console.ReadLine());
+                    Figura = int.Parse(Console.ReadLine());
                     switch (Figura)
                     {
                         case 1:
 
                             {
-                                double a;
-                                double p;
-                                bool succes = false;
-                                while (succes == false)
+
+                                Console.WriteLine("Wprowadź długość boku a ");
+                                var szczur = Console.ReadLine();
+
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
+
+                                while (isNumber == false)
                                 {
 
-                                    Console.WriteLine("\ndługość boku a \n");
-                                    string t = Console.ReadLine();
-                                    if (t == "")
-                                    {
-                                        Console.WriteLine("Puste");
-                                        continue;
-                                    }
-                                    else
-                                    {
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
 
-                                        try
-                                        {
-                                            a = double.Parse(t);
-                                        }
-                                        catch (FormatException)
-                                        {
-                                            Console.WriteLine("Musi byc liczba");
-                                            continue;
-                                        }
-
-                                    }
-                                    succes = true;
-                                    break;
-                                } succes = false;
-
-                                double b;
-                                while (succes == false)
-                                {
-
-                                    Console.WriteLine("\ndługość boku b \n");
-                                    string u = Console.ReadLine();
-                                    if (u == "")
-                                    {
-                                        Console.WriteLine("Puste");
-                                        continue;
-                                    }
-                                    else
-                                    {
-
-                                        try
-                                        {
-                                            b = double.Parse(u);
-                                        }
-                                        catch (FormatException)
-                                        {
-                                            Console.WriteLine("Musi byc liczba");
-                                            continue;
-                                        }
-
-                                    }
-                                    succes = true;
-                                    break;
                                 }
+                                Console.WriteLine("Wprowadź długość boku b ");
+                                var szczur2 = Console.ReadLine();
+                                isNumber = double.TryParse(szczur2, out numericValue);
+                                while (isNumber == false)
+                                {
 
-                                Console.WriteLine("\ndługość boku a: \n");
-                                a = double.Parse(Console.ReadLine());
-                                Console.WriteLine("\ndługość boku b: \n");
-                                b = double.Parse(Console.ReadLine());
-                                Console.WriteLine("\npole tego prostokąta: \n");
-                                p = (a * b);
-                                Console.WriteLine(p);
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    continue;
+
+                                }
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("Pole tego prostokątu to: ");
+                                    double a = Convert.ToDouble(szczur);
+                                    double b = Convert.ToDouble(szczur2);
+
+                                    double p;
+                                    p = a * b;
+                                    Console.WriteLine(p);
+                                }
                             }
                             break;
                         case 2:
 
 
                             {
-                                double b;
-                                double a;
-                                double obw;
-                                Console.WriteLine("\ndługość boku a: ");
-                                a = double.Parse(Console.ReadLine());
-                                Console.WriteLine("\ndługość boku b: \n");
-                                b = double.Parse(Console.ReadLine());
-                                Console.WriteLine("\nobwód tego prostokąta: \n");
-                                obw = ((a * 2) + (b * 2));
-                                Console.WriteLine(obw);
+
+                                Console.WriteLine("Wprowadź długość boku a ");
+                                var szczur = Console.ReadLine();
+
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
+
+                                while (isNumber == false)
+                                {
+
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
+
+                                }
+                                Console.WriteLine("Wprowadź długość boku b ");
+                                var szczur2 = Console.ReadLine();
+                                isNumber = double.TryParse(szczur2, out numericValue);
+                                while (isNumber == false)
+                                {
+
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    continue;
+
+                                }
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("Pole tego prostokątu to: ");
+                                    double a = Convert.ToDouble(szczur);
+                                    double b = Convert.ToDouble(szczur2);
+
+                                    double p;
+                                    p = (a * 2) + (b * 2);
+                                    Console.WriteLine(p);
+                                }
                             }
                             break;
 
@@ -229,40 +202,79 @@ namespace MyApplication
                 case 3:
                     Console.WriteLine("\npole = 1\n");
                     Console.WriteLine("obwód = 2\n");
-                    Figura = double.Parse(Console.ReadLine());
+                    Figura = int.Parse(Console.ReadLine());
                     switch (Figura)
                     {
                         case 1:
 
                             {
-                                double e;
-                                double f;
-                                double p;
 
                                 Console.WriteLine("\nWprowadź długość przeciwległej e \n");
-                                e = double.Parse(Console.ReadLine());
+                                var szczur = Console.ReadLine();
 
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
+
+                                while (isNumber == false)
+                                {
+
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
+
+                                }
                                 Console.WriteLine("\nWprowadź długość przeciwległej f \n");
-                                f = double.Parse(Console.ReadLine());
+                                var szczur2 = Console.ReadLine();
+                                isNumber = double.TryParse(szczur2, out numericValue);
+                                while (isNumber == false)
+                                {
 
-                                Console.WriteLine("\npole tego rombu to: \n");
-                                p = (e * f / 2);
-                                Console.WriteLine(p);
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    continue;
+
+                                }
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("\npole tego rombu to: \n");
+                                    double e = Convert.ToDouble(szczur);
+                                    double f = Convert.ToDouble(szczur2);
+                                    double p;
+                                    p = (e * f / 2);
+                                    Console.WriteLine(p);
+                                }
                             }
                             break;
                         case 2:
 
 
                             {
-                                double a; ;
-                                double obw;
+                                {
+                                    Console.WriteLine("\nWprowadź długość boku a\n");
+                                    var szczur = Console.ReadLine();
+                                    double numericValue;
+                                    bool isNumber = double.TryParse(szczur, out numericValue);
 
-                                Console.WriteLine("\nWprowadź długość odcinka a \n");
-                                a = double.Parse(Console.ReadLine());
+                                    while (isNumber == false)
+                                    {
 
-                                Console.WriteLine("\nobwód tego rombu to: \n");
-                                obw = (a * 4);
-                                Console.WriteLine(obw);
+                                        Console.WriteLine("podaj cyfrę");
+                                        szczur = Console.ReadLine();
+                                        isNumber = double.TryParse(szczur, out numericValue);
+                                        continue;
+
+                                    }
+                                    if (isNumber == true)
+                                    {
+                                        Console.WriteLine("\nObwód tego rombu to: \n");
+                                        double a = Convert.ToDouble(szczur);
+                                        double p;
+                                        p = a * 4;
+                                        Console.WriteLine(p);
+                                    }
+                                }
                             }
                             break;
 
@@ -271,55 +283,136 @@ namespace MyApplication
                 case 4:
                     Console.WriteLine("\npole = 1\n");
                     Console.WriteLine("obwód = 2\n");
-                    Figura = double.Parse(Console.ReadLine());
+                    Figura = int.Parse(Console.ReadLine());
                     switch (Figura)
                     {
                         case 1:
 
                             {
-                                double a;
-                                double b;
-                                double h;
-                                double p;
 
                                 Console.WriteLine("\nWprowadź długość boku a \n");
-                                a = double.Parse(Console.ReadLine());
+                                var szczur = Console.ReadLine();
 
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
+
+                                while (isNumber == false)
+                                {
+
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
+
+                                }
                                 Console.WriteLine("\nWprowadź długość boku b \n");
-                                b = double.Parse(Console.ReadLine());
+                                var szczur2 = Console.ReadLine();
+                                isNumber = double.TryParse(szczur2, out numericValue);
+                                while (isNumber == false)
+                                {
 
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    continue;
+
+                                }
                                 Console.WriteLine("\nWprowadź długość wysokości h \n");
-                                h = double.Parse(Console.ReadLine());
+                                var szczur3 = Console.ReadLine();
 
-                                Console.WriteLine("\npole tego trapezu to: \n");
-                                p = ((a + b) * h / 2);
-                                Console.WriteLine(p);
+                                isNumber = double.TryParse(szczur3, out numericValue);
+
+                                while (isNumber == false)
+                                {
+
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur3 = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur3, out numericValue);
+                                    continue;
+
+                                }
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("\npole tego trapezu to: \n");
+                                    double a = Convert.ToDouble(szczur);
+                                    double b = Convert.ToDouble(szczur2);
+                                    double h = Convert.ToDouble(szczur3);
+                                    double p;
+                                    p = (a + b) * h / 2;
+                                    Console.WriteLine(p);
+                                }
                             }
                             break;
                         case 2:
 
                             {
-                                double a;
-                                double b;
-                                double c;
-                                double d;
-                                double obwód;
 
                                 Console.WriteLine("\nWprowadź długość boku a \n");
-                                a = double.Parse(Console.ReadLine());
+                                var szczur = Console.ReadLine();
 
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
+
+                                while (isNumber == false)
+                                {
+
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
+
+                                }
                                 Console.WriteLine("\nWprowadź długość boku b \n");
-                                b = double.Parse(Console.ReadLine());
+                                var szczur2 = Console.ReadLine();
+                                isNumber = double.TryParse(szczur2, out numericValue);
+                                while (isNumber == false)
+                                {
 
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    continue;
+
+                                }
                                 Console.WriteLine("\nWprowadź długość boku c \n");
-                                c = double.Parse(Console.ReadLine());
+                                var szczur3 = Console.ReadLine();
 
+                                isNumber = double.TryParse(szczur3, out numericValue);
+
+                                while (isNumber == false)
+                                {
+
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur3 = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur3, out numericValue);
+                                    continue;
+
+                                }
                                 Console.WriteLine("\nWprowadź długość boku d \n");
-                                d = double.Parse(Console.ReadLine());
+                                var szczur4 = Console.ReadLine();
 
-                                Console.WriteLine("\nobwód tego trapezu to: \n");
-                                obwód = (a + b + c + d);
-                                Console.WriteLine(obwód);
+                                isNumber = double.TryParse(szczur4, out numericValue);
+
+                                while (isNumber == false)
+                                {
+
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur4 = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur4, out numericValue);
+                                    continue;
+
+                                }
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("\nobwód tego trapezu to: \n");
+                                    double a = Convert.ToDouble(szczur);
+                                    double b = Convert.ToDouble(szczur2);
+                                    double c = Convert.ToDouble(szczur3);
+                                    double d = Convert.ToDouble(szczur4);
+                                    double p;
+                                    p = a + b + c + d;
+                                    Console.WriteLine(p);
+                                }
                             }
                             break;
 
@@ -328,47 +421,105 @@ namespace MyApplication
                 case 5:
                     Console.WriteLine("\npole = 1\n");
                     Console.WriteLine("obwód = 2\n");
-                    Figura = double.Parse(Console.ReadLine());
+                    Figura = int.Parse(Console.ReadLine());
                     switch (Figura)
                     {
                         case 1:
-
                             {
-                                double a;
-                                double h;
-                                double p;
 
-                                Console.WriteLine("\nWprowadź długość odcinka a \n");
-                                a = double.Parse(Console.ReadLine());
+                                Console.WriteLine("\nWprowadź długość boku a \n");
+                                var szczur = Console.ReadLine();
 
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
+
+                                while (isNumber == false)
+                                {
+
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
+
+                                }
                                 Console.WriteLine("\nWprowadź długość wysokości h \n");
-                                h = double.Parse(Console.ReadLine());
+                                var szczur2 = Console.ReadLine();
+                                isNumber = double.TryParse(szczur2, out numericValue);
+                                while (isNumber == false)
+                                {
 
-                                Console.WriteLine("\npole tego trójkąta to: \n");
-                                p = ((a * h) / 2);
-                                Console.WriteLine(p);
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    continue;
+
+                                }
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("\nPole tego trójkąta to: \n");
+                                    double a = Convert.ToDouble(szczur);
+                                    double h = Convert.ToDouble(szczur2);
+
+                                    double p;
+                                    p = ((a * h) / 2);
+                                    Console.WriteLine(p);
+                                }
                             }
                             break;
                         case 2:
 
                             {
-                                double a;
-                                double b;
-                                double c;
-                                double obwód;
 
                                 Console.WriteLine("\nWprowadź długość boku a \n");
-                                a = double.Parse(Console.ReadLine());
+                                var szczur = Console.ReadLine();
 
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
+
+                                while (isNumber == false)
+                                {
+
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
+
+                                }
                                 Console.WriteLine("\nWprowadź długość boku b \n");
-                                b = double.Parse(Console.ReadLine());
+                                var szczur2 = Console.ReadLine();
+                                isNumber = double.TryParse(szczur2, out numericValue);
+                                while (isNumber == false)
+                                {
 
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    continue;
+
+                                }
                                 Console.WriteLine("\nWprowadź długość boku c \n");
-                                c = double.Parse(Console.ReadLine());
+                                var szczur3 = Console.ReadLine();
+                                isNumber = double.TryParse(szczur3, out numericValue);
+                                while (isNumber == false)
+                                {
 
-                                Console.WriteLine("\nobwód tego trójkąta to: \n");
-                                obwód = (a + b + c);
-                                Console.WriteLine(obwód);
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur3, out numericValue);
+                                    continue;
+
+                                }
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("\nObwód tego trójkąta to: \n");
+                                    double a = Convert.ToDouble(szczur);
+                                    double b = Convert.ToDouble(szczur2);
+                                    double c = Convert.ToDouble(szczur3);
+
+                                    double p;
+                                    p = a + b + c;
+                                    Console.WriteLine(p);
+                                }
                             }
                             break;
 
@@ -377,39 +528,66 @@ namespace MyApplication
                 case 6:
                     Console.WriteLine("\npole = 1\n");
                     Console.WriteLine("obwód = 2\n");
-                    Figura = double.Parse(Console.ReadLine());
+                    Figura = int.Parse(Console.ReadLine());
                     switch (Figura)
                     {
                         case 1:
                             {
-                                float r;
-                                double p;
+                                Console.WriteLine("\nWprowadź długość boku \n");
+                                var szczur = Console.ReadLine();
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
 
-                                Console.WriteLine("\nWprowadź długość promienia r \n");
-                                r = float.Parse(Console.ReadLine());
+                                while (isNumber == false)
+                                {
 
-                                Console.WriteLine("\npole tego koła to: \n");
-                                p = (Math.Pow((Math.PI * r), 2));
-                                Console.WriteLine(p);
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
+
+                                }
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("\nPole tego kwadratu to: \n");
+                                    double a = Convert.ToDouble(szczur);
+                                    double p;
+                                    p = (Math.Pow((Math.PI * a), 2));
+                                    Console.WriteLine(p);
+                                }
                             }
                             break;
                         case 2:
 
                             {
-                                float r;
-                                double obw;
+                                Console.WriteLine("\nWprowadź długość boku \n");
+                                var szczur = Console.ReadLine();
+                                double numericValue;
+                                bool isNumber = double.TryParse(szczur, out numericValue);
 
-                                Console.WriteLine("\nWprowadź długość promienia r \n");
-                                r = float.Parse(Console.ReadLine());
+                                while (isNumber == false)
+                                {
 
-                                Console.WriteLine("\nobwód tego koła to: \n");
-                                obw = ((Math.PI * r) * 2);
-                                Console.WriteLine(obw);
+                                    Console.WriteLine("podaj cyfrę");
+                                    szczur = Console.ReadLine();
+                                    isNumber = double.TryParse(szczur, out numericValue);
+                                    continue;
+
+                                }
+                                if (isNumber == true)
+                                {
+                                    Console.WriteLine("\nPole tego kwadratu to: \n");
+                                    double a = Convert.ToDouble(szczur);
+                                    double p;
+                                    p = ((Math.PI * a) * 2);
+                                    Console.WriteLine(p);
+                                }
                             }
                             break;
 
                     }
                     break;
+
 
             }
         }
