@@ -116,8 +116,10 @@ namespace MyApplication
                                 Console.WriteLine("Wprowadź długość boku a ");
                                 var szczur = Console.ReadLine();
 
+
                                 double numericValue;
                                 bool isNumber = double.TryParse(szczur, out numericValue);
+
 
                                 while (isNumber == false)
                                 {
@@ -130,17 +132,18 @@ namespace MyApplication
                                 }
                                 Console.WriteLine("Wprowadź długość boku b ");
                                 var szczur2 = Console.ReadLine();
-                                isNumber = double.TryParse(szczur2, out numericValue);
-                                while (isNumber == false)
+                                bool isNumber2 = double.TryParse(szczur2, out numericValue);
+
+                                while (isNumber2 == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
-                                    szczur = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    szczur2 = Console.ReadLine();
+                                    isNumber2 = double.TryParse(szczur2, out numericValue);
                                     continue;
 
                                 }
-                                if (isNumber == true)
+                                if (isNumber == true && isNumber2 == true)
                                 {
                                     Console.WriteLine("Pole tego prostokątu to: ");
                                     double a = Convert.ToDouble(szczur);
@@ -174,19 +177,19 @@ namespace MyApplication
                                 }
                                 Console.WriteLine("Wprowadź długość boku b ");
                                 var szczur2 = Console.ReadLine();
-                                isNumber = double.TryParse(szczur2, out numericValue);
+                                bool isNumber2 = double.TryParse(szczur2, out numericValue);
                                 while (isNumber == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
-                                    szczur = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    szczur2 = Console.ReadLine();
+                                    isNumber2 = double.TryParse(szczur2, out numericValue);
                                     continue;
 
                                 }
-                                if (isNumber == true)
+                                if (isNumber == true && isNumber2 == true)
                                 {
-                                    Console.WriteLine("Pole tego prostokątu to: ");
+                                    Console.WriteLine("Obwód tego prostokątu to: ");
                                     double a = Convert.ToDouble(szczur);
                                     double b = Convert.ToDouble(szczur2);
 
@@ -226,17 +229,17 @@ namespace MyApplication
                                 }
                                 Console.WriteLine("\nWprowadź długość przeciwległej f \n");
                                 var szczur2 = Console.ReadLine();
-                                isNumber = double.TryParse(szczur2, out numericValue);
-                                while (isNumber == false)
+                                bool isNumber2 = double.TryParse(szczur2, out numericValue);
+                                while (isNumber2 == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
-                                    szczur = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    szczur2 = Console.ReadLine();
+                                    isNumber2 = double.TryParse(szczur2, out numericValue);
                                     continue;
 
                                 }
-                                if (isNumber == true)
+                                if (isNumber == true && isNumber2 == true)
                                 {
                                     Console.WriteLine("\npole tego rombu to: \n");
                                     double e = Convert.ToDouble(szczur);
@@ -307,31 +310,30 @@ namespace MyApplication
                                 }
                                 Console.WriteLine("\nWprowadź długość boku b \n");
                                 var szczur2 = Console.ReadLine();
-                                isNumber = double.TryParse(szczur2, out numericValue);
-                                while (isNumber == false)
+                                bool isNumber2 = double.TryParse(szczur2, out numericValue);
+                                while (isNumber2 == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
-                                    szczur = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    szczur2 = Console.ReadLine();
+                                    isNumber2 = double.TryParse(szczur2, out numericValue);
                                     continue;
 
                                 }
                                 Console.WriteLine("\nWprowadź długość wysokości h \n");
                                 var szczur3 = Console.ReadLine();
+                                bool isNumber3 = double.TryParse(szczur3, out numericValue);
 
-                                isNumber = double.TryParse(szczur3, out numericValue);
-
-                                while (isNumber == false)
+                                while (isNumber3 == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
                                     szczur3 = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur3, out numericValue);
+                                    isNumber3 = double.TryParse(szczur3, out numericValue);
                                     continue;
 
                                 }
-                                if (isNumber == true)
+                                if (isNumber == true && isNumber2 == true && isNumber3 == true)
                                 {
                                     Console.WriteLine("\npole tego trapezu to: \n");
                                     double a = Convert.ToDouble(szczur);
@@ -364,45 +366,43 @@ namespace MyApplication
                                 }
                                 Console.WriteLine("\nWprowadź długość boku b \n");
                                 var szczur2 = Console.ReadLine();
-                                isNumber = double.TryParse(szczur2, out numericValue);
-                                while (isNumber == false)
+                                bool isNumber2 = double.TryParse(szczur2, out numericValue);
+                                while (isNumber2 == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
-                                    szczur = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    szczur2 = Console.ReadLine();
+                                    isNumber2 = double.TryParse(szczur2, out numericValue);
                                     continue;
 
                                 }
                                 Console.WriteLine("\nWprowadź długość boku c \n");
                                 var szczur3 = Console.ReadLine();
+                                bool isNumber3 = double.TryParse(szczur3, out numericValue);
 
-                                isNumber = double.TryParse(szczur3, out numericValue);
-
-                                while (isNumber == false)
+                                while (isNumber3 == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
                                     szczur3 = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur3, out numericValue);
+                                    isNumber3 = double.TryParse(szczur3, out numericValue);
                                     continue;
 
                                 }
                                 Console.WriteLine("\nWprowadź długość boku d \n");
                                 var szczur4 = Console.ReadLine();
+                                bool isNumber4 = double.TryParse(szczur4, out numericValue);
 
-                                isNumber = double.TryParse(szczur4, out numericValue);
-
-                                while (isNumber == false)
+                                while (isNumber4 == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
                                     szczur4 = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur4, out numericValue);
+                                    isNumber4 = double.TryParse(szczur4, out numericValue);
                                     continue;
 
                                 }
-                                if (isNumber == true)
+                                if (isNumber == true && isNumber2 == true && isNumber3 == true && isNumber4 == true)
                                 {
                                     Console.WriteLine("\nobwód tego trapezu to: \n");
                                     double a = Convert.ToDouble(szczur);
@@ -444,17 +444,17 @@ namespace MyApplication
                                 }
                                 Console.WriteLine("\nWprowadź długość wysokości h \n");
                                 var szczur2 = Console.ReadLine();
-                                isNumber = double.TryParse(szczur2, out numericValue);
-                                while (isNumber == false)
+                                bool isNumber2 = double.TryParse(szczur2, out numericValue);
+                                while (isNumber2 == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
-                                    szczur = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    szczur2 = Console.ReadLine();
+                                    isNumber2 = double.TryParse(szczur2, out numericValue);
                                     continue;
 
                                 }
-                                if (isNumber == true)
+                                if (isNumber == true && isNumber2 == true)
                                 {
                                     Console.WriteLine("\nPole tego trójkąta to: \n");
                                     double a = Convert.ToDouble(szczur);
@@ -487,29 +487,29 @@ namespace MyApplication
                                 }
                                 Console.WriteLine("\nWprowadź długość boku b \n");
                                 var szczur2 = Console.ReadLine();
-                                isNumber = double.TryParse(szczur2, out numericValue);
-                                while (isNumber == false)
+                                bool isNumber2 = double.TryParse(szczur2, out numericValue);
+                                while (isNumber2 == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
-                                    szczur = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur2, out numericValue);
+                                    szczur2 = Console.ReadLine();
+                                    isNumber2 = double.TryParse(szczur2, out numericValue);
                                     continue;
 
                                 }
                                 Console.WriteLine("\nWprowadź długość boku c \n");
                                 var szczur3 = Console.ReadLine();
-                                isNumber = double.TryParse(szczur3, out numericValue);
-                                while (isNumber == false)
+                                bool isNumber3 = double.TryParse(szczur3, out numericValue);
+                                while (isNumber3 == false)
                                 {
 
                                     Console.WriteLine("podaj cyfrę");
-                                    szczur = Console.ReadLine();
-                                    isNumber = double.TryParse(szczur3, out numericValue);
+                                    szczur3 = Console.ReadLine();
+                                    isNumber3 = double.TryParse(szczur3, out numericValue);
                                     continue;
 
                                 }
-                                if (isNumber == true)
+                                if (isNumber == true && isNumber2 == true && isNumber3 == true)
                                 {
                                     Console.WriteLine("\nObwód tego trójkąta to: \n");
                                     double a = Convert.ToDouble(szczur);
