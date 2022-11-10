@@ -6,28 +6,42 @@ namespace MyApplication
     {
         static void Main(string[] args)
         {
+            string endText = "exit";
 
-            var chooseFigure = new Choose();
-            chooseFigure.choose();
-          
+            bool keepLooping = true;
 
-            var square = new SquareArea();
-            square.Square();
+            while (keepLooping)
+            {
 
-            var rectangle = new Recttangle();
-            rectangle.rectangle();
+                var chooseFigure = new Choose();
+                chooseFigure.choose();
 
-            var rhombus = new Rhombus();
-            rhombus.rhombus();
 
-            var trapeze = new Trapeze();
-            trapeze.trapeze();
+                var square = new SquareArea();
+                square.Square();
 
-            var triangle = new Triangle();
-            triangle.triangle();
+                var rectangle = new Recttangle();
+                rectangle.rectangle();
 
-            var circle = new Circle();
-            circle.circle();
+                var rhombus = new Rhombus();
+                rhombus.rhombus();
+
+                var trapeze = new Trapeze();
+                trapeze.trapeze();
+
+                var triangle = new Triangle();
+                triangle.triangle();
+
+                var circle = new Circle();
+                circle.circle();
+
+                if (Console.ReadKey().Key == ConsoleKey.Escape)
+                {
+                    keepLooping = false;
+                }
+
+
+            } 
         }
     }
 }
