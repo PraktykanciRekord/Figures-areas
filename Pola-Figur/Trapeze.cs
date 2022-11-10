@@ -18,6 +18,7 @@ namespace MyApplication
         {
             Console.WriteLine("\npole = 1\n");
             Console.WriteLine("obwód = 2\n");
+
             Figura = int.Parse(Console.ReadLine());
             switch (Figura)
             {
