@@ -13,7 +13,7 @@ namespace MyApplication
             var szczur = Console.ReadLine();
             double numericValue;
             bool isNumber = double.TryParse(szczur, out numericValue);
-            double a = Int32.Parse(Console.ReadLine());
+            double a = double.Parse(Console.ReadLine());
 
             while (isNumber == false)
             {
@@ -37,7 +37,7 @@ namespace MyApplication
         {
             SquareArea perm = new SquareArea();
             Console.WriteLine("Podaj dlugosc");
-            double b = Int32.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
 
             var szczur = Console.ReadLine();
             double numericValue;
@@ -65,7 +65,7 @@ namespace MyApplication
         {
             Recttangle fir = new Recttangle();
             Console.WriteLine("Wprowadź długość boku pierwszego ");
-            double q = Int32.Parse(Console.ReadLine());
+            double q = double.Parse(Console.ReadLine());
             var szczur = Console.ReadLine();
 
             double numericValue;
@@ -81,7 +81,7 @@ namespace MyApplication
 
             }
             Console.WriteLine("Wprowadź długość boku drugiego ");
-            double w = Int32.Parse(Console.ReadLine());
+            double w = double.Parse(Console.ReadLine());
             var szczur2 = Console.ReadLine();
             bool isNumber2 = double.TryParse(szczur2, out numericValue);
 
@@ -106,7 +106,7 @@ namespace MyApplication
             Recttangle per = new Recttangle(); 
 
             Console.WriteLine("Wprowadź długość boku pierwszego ");
-            double z = Int32.Parse(Console.ReadLine());
+            double z = double.Parse(Console.ReadLine());
             var szczur = Console.ReadLine();
 
             double numericValue;
@@ -122,7 +122,7 @@ namespace MyApplication
 
             }
             Console.WriteLine("Wprowadź długość boku drugiego ");
-            double c = Int32.Parse(Console.ReadLine());
+            double c = double.Parse(Console.ReadLine());
             var szczur2 = Console.ReadLine();
             bool isNumber2 = double.TryParse(szczur2, out numericValue);
             while (isNumber == false)
@@ -140,6 +140,48 @@ namespace MyApplication
                 Console.WriteLine(Recttangle.rePem(z, c));
             }
 
+        }
+
+        private void RhomArea()
+        {
+            Rhombus rhAr = new Rhombus();
+
+            Console.WriteLine("\nWprowadź długość przeciwległej e \n");
+            double e = double.Parse(Console.ReadLine());
+
+            var szczur = Console.ReadLine();
+
+            double numericValue;
+            bool isNumber = double.TryParse(szczur, out numericValue);
+
+            while (isNumber == false)
+            {
+
+                Console.WriteLine("podaj cyfrę");
+                szczur = Console.ReadLine();
+                isNumber = double.TryParse(szczur, out numericValue);
+                continue;
+
+            }
+            Console.WriteLine("\nWprowadź długość przeciwległej f \n");
+            double f = double.Parse(Console.ReadLine());
+            var szczur2 = Console.ReadLine();
+            bool isNumber2 = double.TryParse(szczur2, out numericValue);
+            while (isNumber2 == false)
+            {
+
+                Console.WriteLine("podaj cyfrę");
+                szczur2 = Console.ReadLine();
+                isNumber2 = double.TryParse(szczur2, out numericValue);
+                continue;
+
+            }
+            if (isNumber == true && isNumber2 == true)
+            {
+                Console.WriteLine("\npole tego rombu to: \n");
+                Console.WriteLine(Rhombus.RhoArea(e, f));
+
+            }
         }
 
         static void Main(string[] args)
