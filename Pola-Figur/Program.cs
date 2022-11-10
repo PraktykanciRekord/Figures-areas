@@ -7,11 +7,27 @@ namespace MyApplication
         static void Main(string[] args)
         {
 
-            var chooseFigure = new Choose(2, 2, 2, 2);
+            var chooseFigure = new Choose();
             chooseFigure.choose();
+          
 
-            var square = new SquareArea(2, 2, 2, 2);
+            var square = new SquareArea();
             square.Square();
+
+            var rectangle = new Recttangle();
+            rectangle.rectangle();
+
+            var rhombus = new Rhombus();
+            rhombus.rhombus();
+
+            var trapeze = new Trapeze();
+            trapeze.trapeze();
+
+            var triangle = new Triangle();
+            triangle.triangle();
+
+            var circle = new Circle();
+            circle.circle();
         }
     }
 }

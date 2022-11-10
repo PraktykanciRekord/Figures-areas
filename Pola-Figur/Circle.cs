@@ -1,19 +1,18 @@
 ﻿using System;
 namespace MyApplication
 {
-    public class Recttangle
+    public class Circle
     {
         public double figura;
         public double pole;
         public double obwod;
         public double Figura;
 
-        public Recttangle()
+        public Circle()
         {
-           
         }
 
-        public void rectangle()
+        public void circle()
         {
             Console.WriteLine("\npole = 1\n");
             Console.WriteLine("obwód = 2\n");
@@ -21,12 +20,9 @@ namespace MyApplication
             switch (Figura)
             {
                 case 1:
-
                     {
-
-                        Console.WriteLine("Wprowadź długość boku a ");
+                        Console.WriteLine("\nWprowadź długość boku \n");
                         var szczur = Console.ReadLine();
-
                         double numericValue;
                         bool isNumber = double.TryParse(szczur, out numericValue);
 
@@ -39,27 +35,12 @@ namespace MyApplication
                             continue;
 
                         }
-                        Console.WriteLine("Wprowadź długość boku b ");
-                        var szczur2 = Console.ReadLine();
-                        bool isNumber2 = double.TryParse(szczur2, out numericValue);
-
-                        while (isNumber2 == false)
+                        if (isNumber == true)
                         {
-
-                            Console.WriteLine("podaj cyfrę");
-                            szczur2 = Console.ReadLine();
-                            isNumber2 = double.TryParse(szczur2, out numericValue);
-                            continue;
-
-                        }
-                        if (isNumber == true && isNumber2 == true)
-                        {
-                            Console.WriteLine("Pole tego prostokątu to: ");
+                            Console.WriteLine("\nPole tego kwadratu to: \n");
                             double a = Convert.ToDouble(szczur);
-                            double b = Convert.ToDouble(szczur2);
-
                             double p;
-                            p = a * b;
+                            p = (Math.Pow((Math.PI * a), 2));
                             Console.WriteLine(p);
                         }
                     }
@@ -67,10 +48,8 @@ namespace MyApplication
                 case 2:
 
                     {
-
-                        Console.WriteLine("Wprowadź długość boku a ");
+                        Console.WriteLine("\nWprowadź długość boku \n");
                         var szczur = Console.ReadLine();
-
                         double numericValue;
                         bool isNumber = double.TryParse(szczur, out numericValue);
 
@@ -83,30 +62,18 @@ namespace MyApplication
                             continue;
 
                         }
-                        Console.WriteLine("Wprowadź długość boku b ");
-                        var szczur2 = Console.ReadLine();
-                        bool isNumber2 = double.TryParse(szczur2, out numericValue);
-                        while (isNumber == false)
+                        if (isNumber == true)
                         {
-
-                            Console.WriteLine("podaj cyfrę");
-                            szczur2 = Console.ReadLine();
-                            isNumber2 = double.TryParse(szczur2, out numericValue);
-                            continue;
-
-                        }
-                        if (isNumber == true && isNumber2 == true)
-                        {
-                            Console.WriteLine("Obwód tego prostokątu to: ");
+                            Console.WriteLine("\nPole tego kwadratu to: \n");
                             double a = Convert.ToDouble(szczur);
-                            double b = Convert.ToDouble(szczur2);
-
                             double p;
-                            p = (a * 2) + (b * 2);
+                            p = ((Math.PI * a) * 2);
                             Console.WriteLine(p);
                         }
                     }
                     break;
+
+
             }
         }
     }

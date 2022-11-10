@@ -8,12 +8,9 @@ namespace MyApplication
         public double obwod;
         public double Figura;
 
-        public Choose(double figura, double pole, double obwod, double Figura)
+        public Choose()
         {
-            this.figura = figura;
-            this.pole = pole;
-            this.obwod = obwod;
-            this.Figura = Figura;
+            
         }
 
 
@@ -24,13 +21,13 @@ namespace MyApplication
             double pole;
             double obwod;
             double Figura;
-            Console.WriteLine("jaką figure chcesz obliczyć \n");
-            Console.WriteLine("Kwadrat --- 1\n");
-            Console.WriteLine("prostokąt - 2\n");
-            Console.WriteLine("romb ------ 3\n");
-            Console.WriteLine("trapez ---- 4\n");
-            Console.WriteLine("trójkąt --- 5\n");
-            Console.WriteLine("koło ------ 6\n");
+            Console.WriteLine("Obliczanie pola i obwodow figur: \n");
+            Console.WriteLine("Kwadrat --- 1 figura\n");
+            Console.WriteLine("prostokąt - 2 fiugra\n");
+            Console.WriteLine("romb ------ 3 figura\n");
+            Console.WriteLine("trapez ---- 4 figura\n");
+            Console.WriteLine("trójkąt --- 5 figura\n");
+            Console.WriteLine("koło ------ 6 figura\n");
             figura = double.Parse(Console.ReadLine());
             while (figura < 1 || figura > 6)
             {
