@@ -484,33 +484,39 @@ namespace MyApplication
         static void Main(string[] args)
         {
 
-            var chooseFigure = new Choose();
-            chooseFigure.choose();
+            while(true)
+            {
 
-            Program wkn = new Program();
-            wkn.SqArea();
-            wkn.SqPeri();
+                var chooseFigure = new Choose();
+                chooseFigure.choose();
 
-            Program re = new Program();
-            re.ReArea();
-            re.rePem();
-            
+                Program wkn = new Program();
+                wkn.SqArea();
+                wkn.SqPeri();
 
-            Program RhomPer = new Program();
-            RhomPer.RhomPer();
-            RhomPer.RhomArea();
+                Program re = new Program();
+                re.ReArea();
+                re.rePem();
 
-            Program Trp = new Program();
-            Trp.TrapAr();
-            Trp.TrapPer();
-            
-            Program Tri = new Program();
-            Tri.TriArea();
-            Tri.TriPer();
 
-            Program cir = new Program();
-            cir.cirArea();
-            cir.cirPer();
+                Program RhomPer = new Program();
+                RhomPer.RhomPer();
+                RhomPer.RhomArea();
+
+                Program Trp = new Program();
+                Trp.TrapAr();
+                Trp.TrapPer();
+
+                Program Tri = new Program();
+                Tri.TriArea();
+                Tri.TriPer();
+
+                Program cir = new Program();
+                cir.cirArea();
+                cir.cirPer();
+            }
+
+
         }
     }
 }
