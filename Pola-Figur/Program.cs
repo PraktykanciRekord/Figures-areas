@@ -13,7 +13,7 @@ namespace MyApplication
             var szczur = Console.ReadLine();
             double numericValue;
             bool isNumber = double.TryParse(szczur, out numericValue);
-            double a = double.Parse(Console.ReadLine());
+            
 
             while (isNumber == false)
             {
@@ -27,7 +27,7 @@ namespace MyApplication
             if (isNumber == true)
             {
                 Console.WriteLine("\nPole tego kwadratu to: \n");
-                double x = Convert.ToDouble(szczur);
+                double a = Convert.ToDouble(szczur);
                 Console.WriteLine(SquareArea.SquareA(a));
             }
             
@@ -37,7 +37,7 @@ namespace MyApplication
         {
             SquareArea perm = new SquareArea();
             Console.WriteLine("Podaj dlugosc");
-            double b = double.Parse(Console.ReadLine());
+            
 
             var szczur = Console.ReadLine();
             double numericValue;
@@ -56,7 +56,7 @@ namespace MyApplication
             if (isNumber == true)
             {
                 Console.WriteLine("\nObwód tego kwadratu to: \n");
-                double a = Convert.ToDouble(szczur);
+                double b = Convert.ToDouble(szczur);
                 Console.WriteLine(SquareArea.SquareA(b));
             }
         }
@@ -65,7 +65,7 @@ namespace MyApplication
         {
             Recttangle fir = new Recttangle();
             Console.WriteLine("Wprowadź długość boku pierwszego ");
-            double q = double.Parse(Console.ReadLine());
+            
             var szczur = Console.ReadLine();
 
             double numericValue;
@@ -81,7 +81,7 @@ namespace MyApplication
 
             }
             Console.WriteLine("Wprowadź długość boku drugiego ");
-            double w = double.Parse(Console.ReadLine());
+            
             var szczur2 = Console.ReadLine();
             bool isNumber2 = double.TryParse(szczur2, out numericValue);
 
@@ -97,6 +97,8 @@ namespace MyApplication
             if (isNumber == true && isNumber2 == true)
             {
                 Console.WriteLine("Pole tego prostokątu to: ");
+                double q = Convert.ToDouble(szczur);
+                double w = Convert.ToDouble(szczur);
                 Console.WriteLine(Recttangle.recArea(q, w));
             }
         }
@@ -106,7 +108,7 @@ namespace MyApplication
             Recttangle per = new Recttangle(); 
 
             Console.WriteLine("Wprowadź długość boku pierwszego ");
-            double z = double.Parse(Console.ReadLine());
+            
             var szczur = Console.ReadLine();
 
             double numericValue;
@@ -122,7 +124,7 @@ namespace MyApplication
 
             }
             Console.WriteLine("Wprowadź długość boku drugiego ");
-            double c = double.Parse(Console.ReadLine());
+            
             var szczur2 = Console.ReadLine();
             bool isNumber2 = double.TryParse(szczur2, out numericValue);
             while (isNumber == false)
@@ -137,6 +139,8 @@ namespace MyApplication
             if (isNumber == true && isNumber2 == true)
             {
                 Console.WriteLine("Obwód tego prostokątu to: ");
+                double z = Convert.ToDouble(szczur);
+                double c = Convert.ToDouble(szczur);
                 Console.WriteLine(Recttangle.rePem(z, c));
             }
 
@@ -147,7 +151,7 @@ namespace MyApplication
             Rhombus rhAr = new Rhombus();
 
             Console.WriteLine("\nWprowadź długość przeciwległej e \n");
-            double e = double.Parse(Console.ReadLine());
+            
 
             var szczur = Console.ReadLine();
 
@@ -164,7 +168,7 @@ namespace MyApplication
 
             }
             Console.WriteLine("\nWprowadź długość przeciwległej f \n");
-            double f = double.Parse(Console.ReadLine());
+            
             var szczur2 = Console.ReadLine();
             bool isNumber2 = double.TryParse(szczur2, out numericValue);
             while (isNumber2 == false)
@@ -179,6 +183,8 @@ namespace MyApplication
             if (isNumber == true && isNumber2 == true)
             {
                 Console.WriteLine("\npole tego rombu to: \n");
+                double e = Convert.ToDouble(szczur);
+                double f = Convert.ToDouble(szczur);
                 Console.WriteLine(Rhombus.RhoArea(e, f));
 
             }
@@ -189,7 +195,7 @@ namespace MyApplication
             Rhombus rhAr = new Rhombus();
 
             Console.WriteLine("\nWprowadź długość boku b \n");
-            double b = double.Parse(Console.ReadLine());
+            
             var szczur = Console.ReadLine();
 
             double numericValue;
@@ -208,6 +214,7 @@ namespace MyApplication
             if (isNumber == true)
            
                 Console.WriteLine("\nobowd tego rombu to: \n");
+                double b = Convert.ToDouble(szczur);
                 Console.WriteLine(Rhombus.rhomPer(b));
             }
 
@@ -216,9 +223,7 @@ namespace MyApplication
             Trapeze tr = new Trapeze();
 
             Console.WriteLine("\nWprowadź długość boku a \n");
-            double a = double.Parse(Console.ReadLine());
-            double b = double.Parse(Console.ReadLine());
-            double h = double.Parse(Console.ReadLine());
+            
             var szczur = Console.ReadLine();
 
             double numericValue;
@@ -261,6 +266,9 @@ namespace MyApplication
             if (isNumber == true && isNumber2 == true && isNumber3 == true)
             {
                 Console.WriteLine("\npole tego trapezu to: \n");
+                double a = Convert.ToDouble(szczur);
+                double b = Convert.ToDouble(szczur);
+                double h = Convert.ToDouble(szczur);
                 Console.WriteLine(Trapeze.TrAr(a,b,h));
             }
         }
@@ -270,10 +278,7 @@ namespace MyApplication
             Trapeze TrPe = new Trapeze();
 
             Console.WriteLine("\nWprowadź długość boku a \n");
-            double aa = double.Parse(Console.ReadLine());
-            double bb = double.Parse(Console.ReadLine());
-            double cc = double.Parse(Console.ReadLine());
-            double dd = double.Parse(Console.ReadLine());
+          
 
             var szczur = Console.ReadLine();
 
@@ -330,7 +335,10 @@ namespace MyApplication
             if (isNumber == true && isNumber2 == true && isNumber3 == true && isNumber4 == true)
             {
                 Console.WriteLine("\nobwód tego trapezu to: \n");
-                
+                double aa = Convert.ToDouble(szczur);
+                double bb = Convert.ToDouble(szczur);
+                double cc = Convert.ToDouble(szczur);
+                double dd = Convert.ToDouble(szczur);
                 Console.WriteLine(Trapeze.TrPe(aa,bb,cc,dd));
             }
         }
@@ -339,8 +347,7 @@ namespace MyApplication
         {
             Triangle trAr = new Triangle();
             Console.WriteLine("\nWprowadź długość boku a \n");
-            double a = double.Parse(Console.ReadLine());
-            double h = double.Parse(Console.ReadLine());
+            
 
             var szczur = Console.ReadLine();
 
@@ -371,6 +378,8 @@ namespace MyApplication
             if (isNumber == true && isNumber2 == true)
             {
                 Console.WriteLine("\nPole tego trójkąta to: \n");
+                double a = Convert.ToDouble(szczur);
+                double h = Convert.ToDouble(szczur);
                 Console.WriteLine(Triangle.TriAr(a, h));
             }
         }
@@ -379,9 +388,7 @@ namespace MyApplication
         {
             Triangle trPer = new Triangle();
             Console.WriteLine("\nWprowadź długość boku a \n");
-            double z = double.Parse(Console.ReadLine());
-            double x = double.Parse(Console.ReadLine());
-            double c = double.Parse(Console.ReadLine());
+            
             var szczur = Console.ReadLine();
 
             double numericValue;
@@ -423,7 +430,9 @@ namespace MyApplication
             if (isNumber == true && isNumber2 == true && isNumber3 == true)
             {
                 Console.WriteLine("\nObwód tego trójkąta to: \n");
-                
+                double z = Convert.ToDouble(szczur);
+                double x = Convert.ToDouble(szczur);
+                double c = Convert.ToDouble(szczur);
                 Console.WriteLine(Triangle.TriPer(z,x,c));
             }
         }
@@ -431,7 +440,7 @@ namespace MyApplication
         {
             Circle cirAr = new Circle();
             Console.WriteLine("\nWprowadź długość promienia \n");
-            double r = double.Parse(Console.ReadLine());
+            
             var szczur = Console.ReadLine();
             double numericValue;
             bool isNumber = double.TryParse(szczur, out numericValue);
@@ -448,7 +457,7 @@ namespace MyApplication
             if (isNumber == true)
             {
                 Console.WriteLine("\nPole tego kwadratu to: \n");
-                
+                double r = Convert.ToDouble(szczur);
                 Console.WriteLine(Circle.CirAr(r));
             }
 
@@ -459,7 +468,7 @@ namespace MyApplication
             Circle cirPer = new Circle();
 
             Console.WriteLine("\nWprowadź długość boku \n");
-            double rr = double.Parse(Console.ReadLine());
+            
             var szczur = Console.ReadLine();
             double numericValue;
             bool isNumber = double.TryParse(szczur, out numericValue);
@@ -476,7 +485,7 @@ namespace MyApplication
             if (isNumber == true)
             {
                 Console.WriteLine("\nPole tego kwadratu to: \n");
-                
+                double rr = Convert.ToDouble(szczur);
                 Console.WriteLine(Circle.CirPer(rr));
             }
         }
