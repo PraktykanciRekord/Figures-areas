@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>Pola_Figur_Tests</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -23,6 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pola-Figur\Pola-Figur.csproj" />
+    <ProjectReference Include="..\..\Figures-areas-perimeters-test\Pola-Figur\PolaFigur.csproj" />
   </ItemGroup>
 </Project>
