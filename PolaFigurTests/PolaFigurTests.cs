@@ -31,7 +31,7 @@ public class PolaFigurTests
         Assert.Equal(expected, result);
     }
 
-    [Theory]
+    [Theory] 
     [InlineData(2, 8, 16)]
     [InlineData(4, 5, 20)]
     [InlineData(2, 1, 2)]
