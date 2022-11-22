@@ -13,5 +13,5 @@ public class PolaFigur : ControllerBase
     {
         return SquareArea.SquareA(double.Parse(a)).ToString();
     }
-}
+}  
 
